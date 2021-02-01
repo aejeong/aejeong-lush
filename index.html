@@ -5,50 +5,81 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>pc</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./reset.css">
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
   <header>
-      <div class="logo">Logo.</div>
-      <div class="left-nav">
-          <a href="#none">
+      <div class="header-container">
+        <div class="logo">
+            <img src="./images/lush-logo-black.png" alt="logo">
+        </div>
+        <div class="left-nav">
+            <a href="#none">
+              <span class="underline-action">
+              Product Design
+            </span>
+           </a>
+            <a href="#none">
+              <span class="underline-action">
+              Branding
+            </span>
+          </a>
+        </div>
+        <div class="right-nav">
+            <a href="#none">
             <span class="underline-action">
-            Product Design
-          </span>
-         </a>
-          <a href="#none">
+              Work
+            </span>
+          </a>
+            <a href="#none">
             <span class="underline-action">
-            Branding
-          </span>
-        </a>
-      </div>
-      <div class="right-nav">
+              Reviews
+            </span>
+           </a>
+            <a href="#none">
+             <span class="underline-action">
+              About
+            </span>
+          </a>
           <a href="#none">
           <span class="underline-action">
-            Work
+              Insights  
           </span>
-        </a>
-          <a href="#none">
-          <span class="underline-action">
-            Reviews
-          </span>
-         </a>
-          <a href="#none">
-           <span class="underline-action">
-            About
-          </span>
-        </a>
-        <a href="#none">
-        <span class="underline-action">
-            Insights  
-        </span>
-        </a>
-        <a href="#none">Contact us</a>
+          </a>
+          <a href="#none">Contact us</a>
+        </div>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+        </div>
       </div>
   </header>
-  <section class="main">
-    <span>main swiper</span>
+  <section>
+      <div class="swiper-container">
+        <div class="dim"></div>
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <div class="swiper-slide">
+              <img src="./images/slider1.jpg" alt="">
+          </div>
+          <div class="swiper-slide">
+            <img src="./images/slider2.jpg" alt="">
+          </div>
+          <div class="swiper-slide">
+            <img src="./images/slider3.jpg" alt="">
+          </div>
+        </div>
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </div>
+      
   </section>
   <section>
           <p>"Clothes won't change the world.<br/>
@@ -104,7 +135,24 @@
         </div>
   </section>
   <section>
-      swiper section
+      <h3>Shop Best Sellers</h3>
+    <div class="swiper-container best">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+              <img src="./images/slider1.jpg" alt="">
+          </div>
+          <div class="swiper-slide">
+            <img src="./images/slider2.jpg" alt="">
+          </div>
+          <div class="swiper-slide">
+            <img src="./images/slider3.jpg" alt="">
+          </div>
+        </div>
+        <div class="swiper-button-prev best"></div>
+        <div class="swiper-button-next best"></div>
+    <div class="swiper-pagination"></div>
+
+      </div>
   </section>
   <section>
       <div class="group">
@@ -193,14 +241,7 @@
         Swiper 222222
         Our Nocode Master Partners
     </h2>
-    <div class="slides">
-        <div class="slide">
-        </div>
-        <div class="slide">
-        </div>
-        <div class="slide">
-        </div>
-    </div>
+  
 </section>
 <section>
     <div>
@@ -223,28 +264,52 @@
     </div>
 </section>
 <footer>
-<div class="subscription">
-    <p>Inscrivez-vous pour recevoir<br/>
-    nos conseils et inspirations chapeaux</p>
-    <form>
-        <input type="email" placeholder="Your email"/>
-    </form>
-</div>
-<div class="links">
-    <div>
-        <a href="#none">E-shop</a>
-        <a href="#none">The brand</a>
-        <a href="#none">Shops</a>
-        <a href="#none">Help & Questions</a>
+    <div class="footer-top">
+        <div>
+            <div class="subscription">
+                <p>Inscrivez-vous pour recevoir<br/>
+                nos conseils et inspirations chapeaux</p>
+                <form>
+                    <input type="email" placeholder="Your email"/>
+                    <button type="submit">
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                </form>
+            </div>
+            <div class="links">
+                <div>
+                    <a href="#none">E-shop</a>
+                    <a href="#none">The brand</a>
+                    <a href="#none">Shops</a>
+                    <a href="#none">Help & Questions</a>
+                </div>
+                <div>
+                        <a href="#none">Maintenance & after-sales service</a>
+                        <a href="#none">Delivery & Returns</a>
+                        <a href="#none">Temrs of Service</a>
+                        <a href="#none">Legal Notice</a>
+                        <a href="#none">Personal data</a>
+                </div>
+            </div>
+        </div>
     </div>
-    <div>
-            <a href="#none">Maintenance & after-sales service</a>
-            <a href="#none">Delivery & Returns</a>
-            <a href="#none">Temrs of Service</a>
-            <a href="#none">Legal Notice</a>
-            <a href="#none">Personal data</a>
+    <div class="footer-bottom">
+        <span>&copy; 2021 Mademoiselle Chapeaux. All Rights Reserved.</span>
+        <div class="sns">
+            <span>FOLLOW US</span>
+            <div class="links">
+                <a href="">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="">
+                    <i class="fab fa-pinterest-p"></i>
+                </a>
+                <a href=""><i class="fab fa-instagram"></i></a>
+            </div>   
+        </div>
     </div>
-</div>
 </footer>
 </body>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script src="./index.js"></script>
 </html>
