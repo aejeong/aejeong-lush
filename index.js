@@ -9,7 +9,7 @@ var header = document.querySelector('.header-container')
 document.addEventListener('scroll',function(e){
     if(scrollY === 0){
         header.classList.remove('active');
-    }else{
+    }else if(innerWidth >= 1024 && scrollY  > 0){
         header.classList.add('active');
     }
 })
@@ -29,12 +29,22 @@ function initialSwiper(){
         slidesPerView: 3,
         slidesPerGroup: 3,
         navigation: {
-          nextEl: '.swiper-button-next.best',
-          prevEl: '.swiper-button-prev.best',
+          nextEl: '.best-next',
+          prevEl: '.best-prev',
         },
         pagination: {
             el: '.swiper-pagination'
           },
+    })
+
+    var partnerSwiper = new Swiper('.swiper-container.partner',{
+        spaceBetween: 40,
+        loop: true,
+        autoplay:{
+            delay:3300
+        },
+        slidesPerView: 3,
+        slidesPerGroup: 3,
     })
 }
 
