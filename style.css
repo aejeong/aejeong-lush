@@ -125,7 +125,7 @@ header .header-container .hamburger.active ~ .menu a:last-child {
 }
 .ani-btn:hover {
   animation: pulse 1s ease-in infinite;
-  background: radial-gradient(circle, rgba(0, 10, 255, 0.5) 43%, transparent 50%) 0 0/1em 1em, radial-gradient(circle, rgba(0, 10, 255, 0.5) 43%, transparent 50%) 0.5em 0.5em/2em 2em;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.5) 43%, transparent 50%) 0 0/1em 1em, radial-gradient(circle, rgba(255, 255, 255, 0.5) 43%, transparent 50%) 0.5em 0.5em/2em 2em;
   background-color: black;
 }
 
@@ -145,6 +145,7 @@ section:nth-of-type(1) {
   background-color: #fff;
   color: white;
   margin: 0 auto;
+  height: 100vh;
 }
 section:nth-of-type(1) .swiper-container {
   position: relative;
@@ -161,8 +162,29 @@ section:nth-of-type(1) .swiper-container .dim {
   opacity: 0.4;
   z-index: 2;
 }
-section:nth-of-type(1) .swiper-container .swiper-slide img {
-  width: 120%;
+section:nth-of-type(1) .swiper-container .swiper-slide {
+  position: relative;
+}
+section:nth-of-type(1) .swiper-container .swiper-slide img, section:nth-of-type(1) .swiper-container .swiper-slide video {
+  width: 125%;
+}
+section:nth-of-type(1) .swiper-container .swiper-slide p {
+  position: absolute;
+  top: 45%;
+  color: white;
+  font-size: 45px;
+  text-align: center;
+  width: 100%;
+  font-weight: bold;
+  font-family: "Sriracha", cursive;
+}
+section:nth-of-type(1) .swiper-container .swiper-slide p span {
+  font-family: initial;
+  width: 50%;
+  font-size: 20px;
+  line-height: 1.5em;
+  display: block;
+  margin: 20px auto;
 }
 section:nth-of-type(1) .swiper-button-prev {
   left: 35px;
@@ -202,6 +224,7 @@ section:nth-of-type(2) > p {
   padding: 80px;
   font-size: 46px;
   text-align: center;
+  font-family: "Sriracha", cursive;
 }
 section:nth-of-type(2) > p span {
   display: block;
@@ -305,6 +328,7 @@ section:nth-of-type(4) h3 {
   margin-top: 79px;
   margin-bottom: 70px;
   font-size: 44px;
+  font-family: "Sriracha", cursive;
 }
 section:nth-of-type(4) .swiper-container {
   max-width: 1320px;
@@ -523,9 +547,10 @@ section:nth-of-type(6) h2 {
   text-align: center;
   font-size: 45px;
   margin: 0;
+  font-family: "Sriracha", cursive;
 }
 section:nth-of-type(6) .swiper-container .swiper-slide {
-  padding: 20px;
+  padding: 30px;
 }
 section:nth-of-type(6) .swiper-container .swiper-slide .container {
   background-color: #fff;
@@ -551,7 +576,8 @@ section:nth-of-type(7) > div .instagram-pictures {
   justify-content: center;
 }
 section:nth-of-type(7) > div .instagram-pictures .picture {
-  border: 1px solid gray;
+  display: inline-block;
+  overflow: hidden;
   width: 230px;
   height: 230px;
   margin: 10px;
