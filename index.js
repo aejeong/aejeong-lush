@@ -16,7 +16,8 @@ document.addEventListener('scroll',function(e){
 }
 
 function initialSwiper(){
-    var minSwiper = new Swiper('.swiper-container', {
+    var mainSwiper = new Swiper('.swiper-container', {
+        initialSlide: 0,
         loop: true,
         navigation: {
           nextEl: '.swiper-button-next',
@@ -25,7 +26,8 @@ function initialSwiper(){
       });
 
     var bestSwiper = new Swiper('.swiper-container.best',{
-        loop: true,
+        initialSlide: 0,
+        loop: false,
         slidesPerView: 3,
         slidesPerGroup: 3,
         navigation: {
@@ -37,15 +39,26 @@ function initialSwiper(){
           },
     })
 
+    
+
+
     var partnerSwiper = new Swiper('.swiper-container.partner',{
+        initialSlide: 0,
         spaceBetween: 40,
+        centeredSlides: true,
         loop: true,
         autoplay:{
             delay:3300
         },
         slidesPerView: 3,
-        slidesPerGroup: 3,
+        slidesPerGroup: 1,
     })
+
+    partnerSwiper.loopDestroy();
+    partnerSwiper.loopCreate();
+
+
+    console.log(partnerSwiper)
 }
 
 function toggleAction(){
