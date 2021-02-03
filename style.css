@@ -46,7 +46,7 @@ header .header-container .left-nav a:first-child {
   position: relative;
 }
 header .header-container .left-nav a:first-child::before {
-  content: "our 5-8 week sprints";
+  content: "fresh handmade";
   text-transform: uppercase;
   position: absolute;
   font-size: 10px;
@@ -185,6 +185,12 @@ section:nth-of-type(1) .swiper-container .swiper-slide p span {
   line-height: 1.5em;
   display: block;
   margin: 20px auto;
+}
+section:nth-of-type(1) .swiper-container .swiper-slide p button {
+  background: transparent;
+  border: 2px solid white;
+  padding: 10px 20px;
+  color: white;
 }
 section:nth-of-type(1) .swiper-button-prev {
   left: 35px;
@@ -427,6 +433,9 @@ section:nth-of-type(4) .swiper-container .best-next {
   height: 30px;
   cursor: pointer;
 }
+section:nth-of-type(4) .swiper-container .swiper-button-disabled {
+  display: none;
+}
 section:nth-of-type(4) .swiper-container .best-prev {
   z-index: 1;
   left: 0;
@@ -610,17 +619,19 @@ section:nth-of-type(6) .swiper-container .swiper-slide .container {
   cursor: pointer;
   background-color: #fff;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-  border-radius: 5px;
   margin: 0 auto;
   height: 250px;
   position: relative;
+  border-radius: 5px;
 }
 section:nth-of-type(6) .swiper-container .swiper-slide .container .img-container {
   width: 100%;
   height: 100%;
+  border-radius: 5px;
   overflow: hidden;
 }
 section:nth-of-type(6) .swiper-container .swiper-slide .container .img-container img {
+  border-radius: 5px;
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -655,6 +666,7 @@ section:nth-of-type(7) > div .instagram-pictures {
 section:nth-of-type(7) > div .instagram-pictures .picture {
   display: inline-block;
   overflow: hidden;
+  cursor: pointer;
   width: 230px;
   height: 230px;
   margin: 10px;

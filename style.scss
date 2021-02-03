@@ -42,7 +42,7 @@ header{
             a:first-child{
             position: relative;
             &::before{
-                content: 'our 5-8 week sprints';
+                content: 'fresh handmade';
                 text-transform: uppercase;
                 position: absolute;
                 font-size: 10px;
@@ -195,25 +195,34 @@ section:nth-of-type(1){
                     display: block;
                     margin: 20px auto;
                 }
+
+                button{
+                    background: transparent;
+                    border: 2px solid white;
+                    padding: 10px 20px;
+                    color: white;
+                }
             }
         }
       }
 
       .swiper-button-prev{
           left:35px;
-      }
-      .swiper-button-next{
-          right:35px;
-      }
-
-      .swiper-button-prev,
-      .swiper-button-next{
+        }
+        .swiper-button-next{
+            right:35px;
+        }
+        
+        
+        .swiper-button-prev,
+        .swiper-button-next{
         background-color: white;
         border-radius: 50%;
         width: 50px;
         height: 50px;
         box-shadow: 0px 0px 10px rgb(0 0 0 / 30%);
         transition: 0.3s;
+       
       }
 
       .swiper-button-prev:hover,
@@ -466,6 +475,10 @@ section:nth-of-type(4){
             cursor:pointer;
         }
 
+        .swiper-button-disabled{
+            display: none;
+        }
+
         .best-prev{
             z-index:1;
             left:0;
@@ -663,15 +676,17 @@ h2{
             cursor:pointer;
             background-color: #fff;
             box-shadow: 0 5px 10px rgba(0,0,0,0.2);
-            border-radius: 5px;
             margin:0 auto;
             height: 250px;
             position: relative;
+            border-radius: 5px;
             .img-container{
                 width:100%;
                 height: 100%;
+                border-radius: 5px;
                 overflow: hidden;
                 img{
+                border-radius: 5px;
                     width:100%;
                     height: 100%;
                     object-fit: cover;
@@ -689,61 +704,6 @@ h2{
                 font-weight: bold;
             }
         }
-        // &:nth-child(1) .container .img-container .img-section,
-        // &:nth-child(2) .container .img-container .img-section,
-        // &:nth-child(3) .container .img-container .img-section,
-        // &:nth-child(4) .container .img-container .img-section,
-        // &:nth-child(5) .container .img-container .img-section,
-        // &:nth-child(6) .container .img-container .img-section,
-        // &:nth-child(7) .container .img-container .img-section
-        // {
-        //     width: inherit;
-        //     height: inherit;        
-        // }
-        // &:nth-child(1) .container .img-container .img-section{
-        //     width: inherit;
-        //     height: inherit;   
-        //     background: url(./images/love_me_do.jpg);
-        //     background-size: cover;
-        //     background-position: center;
-        //     background-repeat: no-repeat;
-        // }
-        // &:nth-child(2) .container .img-container .img-section{
-        //     background: url(./images/a_ring_of_roses.jpg);
-        //     background-size: cover;
-        //     background-position: center;
-        //     background-repeat: no-repeat;
-        // }
-        // &:nth-child(3) .container .img-container .img-section{
-        //     background: url(./images/digital_gift_card_web_banner-01_2_0.jpg);
-        //     background-size: cover;
-        //     background-position: top;
-        //     background-repeat: no-repeat;
-        // }
-        // &:nth-child(4) .container .img-container .img-section{
-        //     background: url(./images/journal_the_big_three1016-2.jpg);
-        //     background-size: cover;
-        //     background-position: center;
-        //     background-repeat: no-repeat;
-        // }
-        // &:nth-child(5) .container .img-container .img-section{
-        //     background: url(./images/chinese_new_year_banner_image_202001.jpg);
-        //     background-size: cover;
-        //     background-position: center;
-        //     background-repeat: no-repeat;
-        // }
-        // &:nth-child(6) .container .img-container .img-section{
-        //     background: url(./images/tea_tree_water_ayr_pic_2019_1.jpg);
-        //     background-size: cover;
-        //     background-position: center;
-        //     background-repeat: no-repeat;
-        // }
-        // &:nth-child(7) .container .img-container .img-section{
-        //     background: url(./images/Oxford_St_04.jpg);
-        //     background-size: cover;
-        //     background-position: center;
-        //     background-repeat: no-repeat;
-        // }
 }
 }
 }
@@ -763,6 +723,7 @@ section:nth-of-type(7){
             .picture{
                 display:inline-block;
                 overflow: hidden;
+                cursor:pointer;
                 width:230px;
                 height: 230px;
                 margin:10px;
