@@ -3,7 +3,6 @@
     initialSwiper();
     toggleAction();
     appear();
-    // videoPlay();
 })();
 
 function headerAction(){
@@ -25,11 +24,11 @@ function initialSwiper(){
           nextEl: '.swiper-button-next',
           prevEl: '.swiper-button-prev',
         },
-      });
+    });
 
     var bestSwiper = new Swiper('.swiper-container.best',{
-        initialSlide: 0,
         loop: false,
+        initialSlide: 0,
         slidesPerView: 3,
         slidesPerGroup: 3,
         navigation: {
@@ -40,9 +39,6 @@ function initialSwiper(){
             el: '.swiper-pagination'
           },
     })
-
-    
-
 
     var partnerSwiper = new Swiper('.swiper-container.partner',{
         initialSlide: 0,
@@ -80,14 +76,12 @@ function appear(){
         rootMargin:'0px',
         threshold: 0.5
     }
-    window.addEventListener('load',function(event){
         boxElement = document.querySelector('#cardsScrollArea')
         boxElement2 = document.querySelector('#brandScrollArea')
         cardsObserver = new IntersectionObserver(cardIntersect,options);
         brandObserver = new IntersectionObserver(brandIntersect,options);
         cardsObserver.observe(boxElement)
         brandObserver.observe(boxElement2)
-    },false)
 }
 
   function cardIntersect(entries, observer) {
@@ -106,12 +100,3 @@ function appear(){
     }
     });
   }
-  
-
-//   function videoPlay(){
-//       var video = document.getElementsByTagName('video')
-//       console.log(video)
-//       if(video[0].paused){
-//           video[0].play();
-//       }
-//   }
