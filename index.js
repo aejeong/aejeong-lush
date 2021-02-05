@@ -74,7 +74,7 @@ function appear(){
     var options={
         root:null,
         rootMargin:'0px',
-        threshold: 0.5
+        threshold: 0.3
     }
         boxElement = document.querySelector('#cardsScrollArea')
         boxElement2 = document.querySelector('#brandScrollArea')
@@ -88,6 +88,8 @@ function appear(){
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
           entry.target.children[1].classList.add('active');
+    }else{
+        entry.target.children[1].classList.remove('active');
     }
     });
   }
@@ -95,8 +97,11 @@ function appear(){
   function brandIntersect(entries, observer) {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
-          entry.target.children[0].classList.add('active');
+        entry.target.children[0].classList.add('active');
           entry.target.children[1].classList.add('active');
+    }else{
+        entry.target.children[0].classList.remove('active');
+        entry.target.children[1].classList.remove('active');
     }
     });
   }
