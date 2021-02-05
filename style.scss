@@ -264,8 +264,10 @@ height:100vh;
     display:flex;
     align-items: center;
     justify-content: center;
-    animation: showingFromRight 1.5s linear 1 both;
-    transform:translate3d(20%,0,0);
+    &.active{
+        animation: showingFromRight 1.5s linear 1 both;
+    }
+    transform:translate3d(15%,0,0);
     opacity: 0;
     visibility: hidden;
     .card{
@@ -333,6 +335,12 @@ section:nth-of-type(3){
         padding-right: 15px;
         margin: 15px auto;
         width: 100%;
+        &.active{
+            animation: showingFromLeft 1.5s linear 1 both;
+        }
+        transform:translate3d(-20%,0,0);
+        opacity: 0;
+        visibility: hidden;
         &:first-child {
             > div{
                 padding:20px 15px 0 0;
@@ -842,6 +850,19 @@ height: 330px;
 @keyframes showingFromRight{
     50%{
     transform:translate3d(10%,0,0);
+    opacity: 0.5;
+    visibility: visible;
+    }
+    100%{
+    transform:translate3d(0,0,0);
+    opacity: 1;
+    visibility: visible;
+    }
+}
+
+@keyframes showingFromLeft{
+    50%{
+    transform:translate3d(-10%,0,0);
     opacity: 0.5;
     visibility: visible;
     }

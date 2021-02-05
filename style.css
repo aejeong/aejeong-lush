@@ -240,10 +240,12 @@ section:nth-of-type(2) .cards {
   display: flex;
   align-items: center;
   justify-content: center;
-  animation: showingFromRight 1.5s linear 1 both;
-  transform: translate3d(20%, 0, 0);
+  transform: translate3d(15%, 0, 0);
   opacity: 0;
   visibility: hidden;
+}
+section:nth-of-type(2) .cards.active {
+  animation: showingFromRight 1.5s linear 1 both;
 }
 section:nth-of-type(2) .cards .card {
   display: inline-block;
@@ -300,6 +302,12 @@ section:nth-of-type(3) .flex-container {
   padding-right: 15px;
   margin: 15px auto;
   width: 100%;
+  transform: translate3d(-20%, 0, 0);
+  opacity: 0;
+  visibility: hidden;
+}
+section:nth-of-type(3) .flex-container.active {
+  animation: showingFromLeft 1.5s linear 1 both;
 }
 section:nth-of-type(3) .flex-container:first-child > div {
   padding: 20px 15px 0 0;
@@ -776,6 +784,18 @@ footer .footer-bottom .sns .links a {
 @keyframes showingFromRight {
   50% {
     transform: translate3d(10%, 0, 0);
+    opacity: 0.5;
+    visibility: visible;
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+    visibility: visible;
+  }
+}
+@keyframes showingFromLeft {
+  50% {
+    transform: translate3d(-10%, 0, 0);
     opacity: 0.5;
     visibility: visible;
   }

@@ -2,6 +2,8 @@
     headerAction();;
     initialSwiper();
     toggleAction();
+    appear();
+    // videoPlay();
 })();
 
 function headerAction(){
@@ -56,9 +58,6 @@ function initialSwiper(){
 
     partnerSwiper.loopDestroy();
     partnerSwiper.loopCreate();
-
-
-    console.log(partnerSwiper)
 }
 
 function toggleAction(){
@@ -70,5 +69,49 @@ function toggleAction(){
             hamburger.classList.remove('active');
         }
     })
-
 }
+
+function appear(){
+    var boxElement;
+    var boxElement2;
+    var observer;
+    var options={
+        root:null,
+        rootMargin:'0px',
+        threshold: 0.5
+    }
+    window.addEventListener('load',function(event){
+        boxElement = document.querySelector('#cardsScrollArea')
+        boxElement2 = document.querySelector('#brandScrollArea')
+        cardsObserver = new IntersectionObserver(cardIntersect,options);
+        brandObserver = new IntersectionObserver(brandIntersect,options);
+        cardsObserver.observe(boxElement)
+        brandObserver.observe(boxElement2)
+    },false)
+}
+
+  function cardIntersect(entries, observer) {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+          entry.target.children[1].classList.add('active');
+    }
+    });
+  }
+  
+  function brandIntersect(entries, observer) {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+          entry.target.children[0].classList.add('active');
+          entry.target.children[1].classList.add('active');
+    }
+    });
+  }
+  
+
+//   function videoPlay(){
+//       var video = document.getElementsByTagName('video')
+//       console.log(video)
+//       if(video[0].paused){
+//           video[0].play();
+//       }
+//   }
