@@ -70,16 +70,15 @@ function toggleAction(){
 function appear(){
     var boxElement;
     var boxElement2;
-    var observer;
     var options={
         root:null,
-        rootMargin:'0px',
-        threshold: 0.3
+        rootMargin:'200px',
+        threshold: 0.5
     }
         boxElement = document.querySelector('#cardsScrollArea')
         boxElement2 = document.querySelector('#brandScrollArea')
-        cardsObserver = new IntersectionObserver(cardIntersect,options);
-        brandObserver = new IntersectionObserver(brandIntersect,options);
+        var cardsObserver = new IntersectionObserver(cardIntersect,options);
+        var brandObserver = new IntersectionObserver(brandIntersect,options);
         cardsObserver.observe(boxElement)
         brandObserver.observe(boxElement2)
 }
