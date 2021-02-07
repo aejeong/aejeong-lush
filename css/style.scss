@@ -222,7 +222,6 @@ header{
                     text-align: center;
                     width: 100%;
                     font-weight: bold;
-                    font-family: 'Sriracha', cursive;
                     opacity: 0;
                     transform: translateY(150px);
                     transition: transform 1.5s, opacity 1.5s;
@@ -508,7 +507,6 @@ section:nth-of-type(4){
         margin-top: 79px;
         margin-bottom: 70px;
         font-size: 44px;
-        font-family: 'Sriracha', cursive;
     }
     .swiper-container{
         max-width: 1320px;
@@ -561,10 +559,11 @@ section:nth-of-type(4){
                     }
                 }
                 }
+                &.on{
+                    transform:scale(0.9);
+                }
             }
-            &.on{
-                transform:scale(0.9);
-            }
+          
         }
         }
         .best-prev,
@@ -707,7 +706,6 @@ section:nth-of-type(5){
             font-size: 30px;
             margin: 25px auto;
             max-width: 900px;
-            font-family: "Sriracha", cursive;
             span{
             font-family: initial;
             display:block;
@@ -729,7 +727,6 @@ section:nth-of-type(5){
                 >span{
                     display: inline-block;
                     margin-bottom: 60px;
-                    font-family: "Sriracha", cursive;
                     text-align: center;
                     line-height: 1em;
                     position: relative;
@@ -782,7 +779,6 @@ h2{
     text-align: center;
     font-size: 45px;
     margin: 0;
-    font-family: 'Sriracha', cursive;
 }
 
 .swiper-container{

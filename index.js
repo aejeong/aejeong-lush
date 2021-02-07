@@ -61,7 +61,7 @@ function initialSwiper(){
     });
 
 
-    var bests = document.querySelectorAll('.best .container')
+    var bests = document.querySelectorAll('.best .container .item')
     var bestSwiper = new Swiper('.swiper-container.best',{
         loop: false,
         initialSlide: 0,
