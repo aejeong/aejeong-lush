@@ -5,18 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>LUSH</title>
-    <link rel="icon" type="image/x-icon" href="./images/favicon.ico" />
+    <link rel="icon" type="image/x-icon" href="./images/icons/favicon.ico" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.3/pace.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.3/pace-theme-default.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css2?family=Sriracha&family=Potta+One&family=Rubik:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Archivo+Black&family=Potta+One&family=Rubik:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="css/uicons-regular-rounded.css">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/style.css">
+    <script src="logo.js"></script>
 </head>
 <body>
-    <!-- <div class="landing"></div> -->
+    <div class="landing">
+        <div class="letters">
+            <span>LUSH
+                <span>LUSH</span>
+            </span>
+        </div>
+        <span class="progress-percentage"></span>
+    </div>
   <header>
       <div class="header-container">
         <h1 class="logo">
@@ -56,7 +66,7 @@
       <div class="swiper-container">
         <div class="swiper-wrapper">
             <div class="swiper-slide">
-            <video src="./images/Intergalactic.mp4" autoplay loop muted="muted" data-swiper-parallax-x="40%" data-swiper-parallax-scale="1.5"></video>
+            <video src="./images/main/Intergalactic.mp4" autoplay loop muted="muted" data-swiper-parallax-x="40%" data-swiper-parallax-scale="1.5"></video>
             <div class="txt-wrap">
                 <h2 class="tit">
                     Soak among the stars with<br> this galactic bath bomb.
@@ -69,7 +79,7 @@
             </p>
         </div>
           <div class="swiper-slide">
-              <img src="./images/slider1.jpg" alt="" data-swiper-parallax-x="40%" data-swiper-parallax-scale="1.5">
+              <img src="./images/main/slider1.jpg" alt="" data-swiper-parallax-x="40%" data-swiper-parallax-scale="1.5">
             <div class="txt-wrap">
                 <h2 class="tit">
                     Our freshest cosmetics in a subscription box
@@ -81,7 +91,7 @@
             </div>
           </div>
           <div class="swiper-slide">
-            <img src="./images/slider2.jpg" alt="" data-swiper-parallax-x="40%" data-swiper-parallax-scale="1.5">
+            <img src="./images/main/slider2.jpg" alt="" data-swiper-parallax-x="40%" data-swiper-parallax-scale="1.5">
            <div class="txt-wrap">
             <h2 class="tit">
                 Bubble Bars
@@ -93,7 +103,7 @@
            </div>
           </div>
           <div class="swiper-slide">
-            <img src="./images/slider3.jpg" alt="" data-swiper-parallax-x="40%" data-swiper-parallax-scale="1.5">
+            <img src="./images/main/slider3.jpg" alt="" data-swiper-parallax-x="40%" data-swiper-parallax-scale="1.5">
             <div class="txt-wrap">
                 <h2 class="tit">
                     All Cruelty Free Perfume
@@ -195,7 +205,7 @@
           <div class="swiper-slide">
               <div class="container">
                   <div class="item">
-                    <img src="./images/product1.png" alt="">
+                    <img src="./images/products/product1.png" alt="">
                     <div class="item-explain">
                         <p>Mask Of Magnaminty</p>
                         <span>Face And Body Mask</span>
@@ -215,13 +225,13 @@
                         </div>
                     </div>
                     </div>
-                    <button>ADD TO BAG</button>
+                    <button type="button">ADD TO BAG</button>
               </div>
           </div>
           <div class="swiper-slide">
             <div class="container">
                 <div class="item">
-                    <img src="./images/product2.png" alt="">
+                    <img src="./images/products/product2.png" alt="">
                   <div class="item-explain">
                       <p>Celestiaz</p>
                       <span>Moisturiser</span>
@@ -240,13 +250,13 @@
                       </div>
                   </div>
                   </div>
-                  <button>ADD TO BAG</button>
+                  <button type="button">ADD TO BAG</button>
             </div>
         </div>
         <div class="swiper-slide">
             <div class="container">
                 <div class="item">
-                    <img src="./images/product3.png" alt="">
+                    <img src="./images/products/product3.png" alt="">
                   <div class="item-explain">
                       <p>Twilight</p>
                       <span>Shower Jelly</span>
@@ -265,13 +275,13 @@
                       </div>
                   </div>
                   </div>
-                  <button>ADD TO BAG</button>
+                  <button type="button">ADD TO BAG</button>
             </div>
         </div>
         <div class="swiper-slide">
             <div class="container">
                 <div class="item">
-                    <img src="./images/product4.png" alt="">
+                    <img src="./images/products/product4.png" alt="">
                   <div class="item-explain">
                       <p>Intergalactic</p>
                       <span>Bath Bomb</span>
@@ -286,13 +296,13 @@
                       <span>$4.95</span>
                   </div>
                   </div>
-                  <button>ADD TO BAG</button>
+                  <button type="button">ADD TO BAG</button>
             </div>
         </div>
         <div class="swiper-slide">
             <div class="container">
                 <div class="item">
-                    <img src="./images/product5.png" alt="">
+                    <img src="./images/products/product5.png" alt="">
                   <div class="item-explain">
                       <p>Angel Hair</p>
                       <span>Shampoo Bar</span>
@@ -310,13 +320,13 @@
                       </div>
                   </div>
                   </div>
-                  <button>ADD TO BAG</button>
+                  <button type="button">ADD TO BAG</button>
             </div>
         </div>
         <div class="swiper-slide">
             <div class="container">
                 <div class="item">
-                    <img src="./images/product6.png" alt="">
+                    <img src="./images/products/product6.png" alt="">
                   <div class="item-explain">
                       <p>Aga's</p>
                       <span>Sliver Conditioner</span>
@@ -337,13 +347,13 @@
                       </div>
                   </div>
                   </div>
-                  <button>ADD TO BAG</button>
+                  <button type="button">ADD TO BAG</button>
             </div>
         </div>
         <div class="swiper-slide">
             <div class="container">
                 <div class="item">
-                    <img src="./images/product7.png" alt="">
+                    <img src="./images/products/product7.png" alt="">
                   <div class="item-explain">
                       <p>Bubblegum</p>
                       <span>Lip Scrub</span>
@@ -361,13 +371,13 @@
                       </div>
                   </div>
                   </div>
-                  <button>ADD TO BAG</button>
+                  <button type="button">ADD TO BAG</button>
             </div>
         </div>
         <div class="swiper-slide">
             <div class="container">
                 <div class="item">
-                    <img src="./images/product8.png" alt="">
+                    <img src="./images/products/product8.png" alt="">
                   <div class="item-explain">
                       <p>Rose Jam</p>
                       <span>Bubbleroon</span>
@@ -382,13 +392,13 @@
                       <span>$4.95</span>
                   </div>
                   </div>
-                  <button>ADD TO BAG</button>
+                  <button type="button">ADD TO BAG</button>
             </div>
         </div>
         <div class="swiper-slide">
             <div class="container">
                 <div class="item">
-                    <img src="./images/product9.png" alt="">
+                    <img src="./images/products/product9.png" alt="">
                   <div class="item-explain">
                       <p>Cerdwen's Candron</p>
                       <span>Bath oil</span>
@@ -403,7 +413,7 @@
                       <span>$5.95</span>
                   </div>
                   </div>
-                  <button>ADD TO BAG</button>
+                  <button type="button">ADD TO BAG</button>
             </div>
         </div>
       </div>
@@ -425,7 +435,7 @@
                             <p>
                                     We recognise that customer safety is of importance but that this can be assured without the use of animals.
                             </p>
-                            <a href="">Find Out More >></a>
+                            <a href="#">Find Out More >></a>
                         </div>    
                     </div>
                 </div>
@@ -437,7 +447,7 @@
                            Fresh ingredients are intrinsic to Lush <br>
                            - it’s at the heart of our philosophy
                             </h3>
-                            <a href="">Find Out More >></a>
+                            <a href="#">Find Out More >></a>
                         </div>
                     </div>
                 </div>
@@ -451,7 +461,7 @@
                             <p>
                                     Life is too short to be reading long labels so we’ve made it easy.
                             </p>
-                            <a href="">Find Out More >></a>
+                            <a href="#">Find Out More >></a>
                         </div>
                     </div>
                 </div>
@@ -563,7 +573,7 @@
       </div>
 </section>
 <section>
-    <div>
+    <div id="instagram">
         <span>LUSH GLOBAL INSTAGRAM</span>
         <h3>
             @lush_ausnz
@@ -597,7 +607,7 @@
                 <form>
                     <input type="email" placeholder="Your email"/>
                     <button type="submit">
-                        <i class="fas fa-arrow-right"></i>
+                        <img src="./images/icons/right-arrow.png" alt="submit-button">
                     </button>
                 </form>
             </div>

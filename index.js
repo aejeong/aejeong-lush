@@ -2,39 +2,36 @@
     headerAction();;
     initialSwiper();
     toggleAction();
-    brandScrollAreaAnimation();
-    extraAreaAnimation();
+    scaleAnimation();
+    touchAnimation();
     AOS.init();
 })();
 
-function brandScrollAreaAnimation(){
-    var controller = new ScrollMagic.Controller();
+
+function scaleAnimation(){
+    var brandController = new ScrollMagic.Controller();
     var tween1 = TweenMax.to('#brandScrollArea img', 0.5, {
       scale: 1,
     });
-    
-    var scene = new ScrollMagic.Scene({
+    var brandScene = new ScrollMagic.Scene({
       triggerElement: "#brandScrollArea",
       duration: "100%"
     })
     .setTween(tween1)
-    .addTo(controller)
+    .addTo(brandController)
 }
 
-
-function extraAreaAnimation(){
-    var controller = new ScrollMagic.Controller();
-    console.dir(TweenMax,'--tweentMax')
-    var tween1 = TweenMax.to('#browse', 0.5, {
-        y: 180
-    });
-    
-    var scene = new ScrollMagic.Scene({
-      triggerElement: "#browse",
-      duration: "100%"
+function touchAnimation(){
+    var pics = document.querySelector('.instagram-pictures')
+    pics.addEventListener('mousedown',function(e){
+        if(e.target.nodeName !== 'IMG') return;
+        e.target.style.transform = 'scale(1)';
     })
-    .setTween(tween1)
-    .addTo(controller)
+    pics.addEventListener('mouseup',function(e){
+        if(e.target.nodeName !== 'IMG') return;
+        e.target.style.transform = 'scale(1.2)';
+    })
+
 }
 
 function headerAction(){
@@ -85,15 +82,14 @@ function initialSwiper(){
     })
 
     var partnerSwiper = new Swiper('.swiper-container.partner',{
+        slidesPerView: 'auto',
+        loopedSlides:3,
         spaceBetween: 40,
-        centeredSlides: true,
         loop: true,
         freeMode:true,
         autoplay:{
             delay:3300
         },
-        slidesPerView: 'auto'
-        // slidesPerGroup: 1,
     })
 
     partnerSwiper.loopDestroy();
