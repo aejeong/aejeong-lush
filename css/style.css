@@ -1,6 +1,7 @@
 @charset "UTF-8";
 body {
   font-family: "Montserrat", sans-serif;
+  min-width: 1300px;
 }
 
 /* header */
@@ -77,6 +78,7 @@ header {
   top: 0;
   width: 100%;
   left: 0;
+  min-width: 1200px;
 }
 header .header-container {
   background-color: #fff;
@@ -260,6 +262,7 @@ header .header-container .hamburger.active ~ .gnb a:last-child {
   z-index: 3;
 }
 .main-vis .swiper-container .swiper-slide .txt-wrap h2 {
+  white-space: nowrap;
   color: white;
   font-size: 58px;
   line-height: 1.3;
@@ -536,7 +539,7 @@ section:nth-of-type(4) h3 {
   font-size: 44px;
 }
 section:nth-of-type(4) .swiper-container {
-  max-width: 1320px;
+  max-width: 1200px;
   margin: 0 auto;
   height: 65%;
 }
@@ -564,6 +567,9 @@ section:nth-of-type(4) .swiper-container .swiper-slide .container button {
   left: 50%;
   transform: translate(-50%, 50%);
   bottom: 10%;
+}
+section:nth-of-type(4) .swiper-container .swiper-slide .container .item {
+  transition: 0.3s;
 }
 section:nth-of-type(4) .swiper-container .swiper-slide .container .item img {
   padding: 0 47px;
@@ -803,7 +809,7 @@ section:nth-of-type(6) h2 {
   margin: 0;
 }
 section:nth-of-type(6) .swiper-container .swiper-slide {
-  padding: 30px;
+  width: 350px;
 }
 section:nth-of-type(6) .swiper-container .swiper-slide .container {
   cursor: pointer;

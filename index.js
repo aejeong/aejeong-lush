@@ -52,8 +52,8 @@ function initialSwiper(){
         initialSlide: 0,
         loop: true,
         navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev',
+          nextEl: '.main-vis > .swiper-container .swiper-button-next',
+          prevEl: '.main-vis > .swiper-container .swiper-button-prev',
         },
     });
 
@@ -68,7 +68,7 @@ function initialSwiper(){
             prevEl: '.best-prev',
         },
         pagination: {
-            el: '.swiper-pagination'
+            el: '.swiper-container.best .swiper-pagination'
         },
         on:{
             touchStart: function(){
@@ -83,13 +83,9 @@ function initialSwiper(){
 
     var partnerSwiper = new Swiper('.swiper-container.partner',{
         slidesPerView: 'auto',
-        loopedSlides:3,
         spaceBetween: 40,
         loop: true,
         freeMode:true,
-        autoplay:{
-            delay:3300
-        },
     })
 
     partnerSwiper.loopDestroy();
