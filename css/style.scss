@@ -1,11 +1,15 @@
 body{
     font-family: 'Montserrat', sans-serif;
-    min-width: 1300px;
+    // min-width: 1300px;
+}
+
+main {
+    overflow: hidden;
 }
 /* header */
 
 .pace .pace-progress {
-     background: transparent;
+    background: transparent;
     position: fixed;
     z-index: 2000;
     top: 0;
@@ -18,14 +22,17 @@ body{
     position:fixed;
     top:0;
     left:0;
+    right: 0;
+    bottom: 0;
     width: 100%;
+    height:100%;
     background: #fff;
-    z-index:9;
+    z-index:100;
     transition: 0.3s;
-    height:100vh;
     opacity: 1;
     visibility: visible;
     display: table;
+    overflow: hidden;
     &.on{
         opacity: 0;
         visibility: hidden;
@@ -36,30 +43,33 @@ body{
         text-align: center;
         font-family: 'Archivo Black', sans-serif;
         position: relative;
-        span{
-            font-size:200px;
+        > span{
+            font-size:15vw;
             font-weight:500;
             color:transparent;
             position: relative;
             width:100%;
-            > span{
+            span{
                 position: absolute;
-                top:11px;
+                top:23px;
                 left:0;
                 color:#262626;
                 transform-origin: left;
                 overflow: hidden;
                 width:0;
-                font-size:200px;
+                font-size:15vw;
+            }
+            .progress-percentage{
+                position: absolute;
+                top: 0;
+                left: 50%;
+                transform: translate(-50%,-50%);
+                width: auto;
+                color:black;
+                font-size: 3.8vw;
+                font-weight: normal;
             }
         }
-    }
-    .progress-percentage{
-        position: absolute;
-        top: 40%;
-        left: 70%;
-        transform: translate(-50%,-50%);
-        font-size: 28px;
     }
 }
 @keyframes logoFill{
@@ -82,27 +92,27 @@ header{
         // min-width: 1250px;
         background-color: #fff;
         transition: 0.3s;
-        height: 120px;
+        height: 90px;
         display: flex;
         align-items: center;
-        padding: 2rem 2rem;
+        padding: 1rem 2rem;
         /* active보다 기본에 들어가있는게 렉이 없어보임*/
         position: fixed;
         top: 0;
         left: 0;
         width:100%;
         &.active{
-            height: 80px;
+            height: 75px;
             z-index:1;
             background-color:rgba(255,255,255,0.7);
             backdrop-filter: blur(6px);
         }
         a{
-            padding: 0 14.5px;
-            font-size: 19px;
             position: relative;
             width:100%;
             height:100%;
+            padding: 0 14.5px;
+            font-size: 16px;
         }
         h1{
             width:82px;
@@ -110,6 +120,7 @@ header{
             height: 50px;
             background: url(../images/icons/lush-logo-black.png) no-repeat;
             background-position: center;
+            cursor: pointer;
             a{
                 display: block;
                 height: 24px;
@@ -154,6 +165,7 @@ header{
         transition: 0.2s;
         width: 25px;
         height: 25px;
+        cursor: pointer;
         span{
             display: inline-block;
             width: 100%;
@@ -179,7 +191,7 @@ header{
             top: 0;
             left: 0;
             z-index: -1;
-            padding-top: 130px;
+            padding-top: 80px;
             a{
                 display: block;
                 margin: 25px 55px;
@@ -214,10 +226,10 @@ header{
 }
 
 .underline-action{
-    background-image:linear-gradient( transparent calc(100% - 2.5px), #000 2.5px);
+    background-image:linear-gradient( transparent calc(100% - 2px), #000 2px);
     padding-bottom: 6px;
     background-size: 0%;
-    transition:all 500ms cubic-bezier(0.23, 0.5, 0.32, 1);
+    transition:all 450ms cubic-bezier(0.23, 0.5, 0.32, 1);
     background-repeat: no-repeat;
 
     &:hover{
@@ -269,9 +281,8 @@ header{
                 z-index:3;
                 h2{
                     white-space: nowrap;
-
                     color: white;
-                    font-size: 58px;
+                    font-size: 4vw;
                     line-height: 1.3;
                     text-align: center;
                     width: 100%;
@@ -341,7 +352,7 @@ header{
         box-shadow: 0px 0px 10px rgb(0 0 0 / 30%);
         transition: 0.3s;
         backdrop-filter: blur(6px);
-       
+        z-index: 1;
       }
 
       .swiper-button-prev:hover,
@@ -367,8 +378,6 @@ header{
 /* 3단 섹션 */
 
 section:nth-of-type(2){
-height:100%;
-overflow: hidden;
 > p{
     padding:80px;
     font-size: 46px;
@@ -397,7 +406,6 @@ overflow: hidden;
     // transform:translate3d(15%,0,0);
     // opacity: 0;
     // visibility: hidden;
-    padding:50px 0;
     .txt-wrap{
         padding:20px 0;
         strong{
@@ -415,7 +423,7 @@ overflow: hidden;
         float:left;
         width:370px;
         .img-container{
-            width:370px;
+            width:inherit;
             height: 500px;
             overflow: hidden;
             position: relative;
@@ -592,7 +600,8 @@ section:nth-of-type(4){
         margin-bottom: 70px;
         font-size: 44px;
     }
-    .swiper-container{
+    .swiper-container.best{
+        position: relative;
         max-width: 1200px;
         margin: 0 auto;
         height: 65%;
@@ -675,13 +684,13 @@ section:nth-of-type(4){
 
         .best-prev{
             z-index:1;
-            left:0;
+            left:-20px;
             background-image: url(../images/icons/left-arrow.png);
             background-size:cover;
         }
         .best-next{
             z-index:1;
-            right:0;
+            right:-20px;
             background-image: url(../images/icons/right-arrow.png);
             background-size:cover;
         }
@@ -1118,7 +1127,6 @@ header{
     display:none;
 }
 .header-container{
-    position:relative;
     .hamburger{
         display: block;
         position: absolute;
@@ -1138,4 +1146,104 @@ header{
     }
 }
 }
+}
+
+@media (max-width: 1199px){
+    section:nth-of-type(2) .cards{
+        width: auto;
+        .card{
+            width: 100%;
+            float: none;
+        &:nth-child(2){ margin: auto;}
+        &:nth-child(3){ margin-top: 40px;}
+        .img-container{
+            width: inherit;
+        }
+        }
+    }
+
+    #brandScrollArea{
+        width: auto;
+        padding:30px 0;
+        .flex-container{
+            padding:30px;
+            &.right, &.left{
+                float:none;
+            }
+            &:first-child .txt-wrap.left,
+            &:last-child .txt-wrap.right{
+                position: static;
+                transform: none;
+                padding: 30px 0;
+            }
+            .img-container, .txt-wrap{
+                width: auto;
+            }
+        }
+    }
+
+    section:nth-of-type(4){
+        min-width: 1000px;
+        height: 700px;
+        .swiper-container.best{
+        .swiper-slide .container{
+            width: 250px;
+            height: 300px;
+            .item img{ width: 70%; }
+            button { padding: 12px; }
+        }
+    }
+    }
+
+    section:nth-of-type(5){
+        min-width: 320px;
+    }
+
+    section:nth-of-type(5) .group:first-child{
+        height: auto;
+        .explain-container{
+            h3{ font-size: 24px; }
+            .explain { padding: 0 30px; }
+        }
+    }
+
+    section:nth-of-type(5) .first,
+    section:nth-of-type(5) .second,
+    section:nth-of-type(5) .third{
+        float:none;
+        width: 100%;
+        height: 450px;
+    }
+
+    section:nth-of-type(5) .group:last-child{
+        >div{
+            padding: 0 30px;
+        }
+        .items-container{
+            flex-direction: column;
+            .item{ width: auto; margin: 35px;}
+        }
+    }
+
+    section:nth-of-type(7) > div .instagram-pictures {
+        flex-wrap:wrap;
+    }
+
+    footer{
+        .footer-top{
+            > div .subscription, .links{
+                float:none;
+                width: 100%;
+            }
+        }
+        .footer-bottom{
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            > span, .sns{
+                width: 100%;
+                padding: 10px 0;
+            }
+        }
+    }
 }

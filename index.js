@@ -64,15 +64,14 @@ function initialSwiper(){
         initialSlide: 0,
         slidesPerView: 3,
         navigation: {
-            nextEl: '.best-next',
-            prevEl: '.best-prev',
+            nextEl: '.swiper-container.best .best-prev',
+            prevEl: '.swiper-container.best .best-next',
         },
         pagination: {
             el: '.swiper-container.best .swiper-pagination'
         },
         on:{
             touchStart: function(){
-                console.dir(bests,'---best')
                 bests.forEach(best=> best.classList.add('on'));
               },
               touchEnd: function(){
